@@ -22,6 +22,14 @@ class kelas extends CI_Controller
         $this->template->load('template', $this->vn . '/list', $data);
     }
 
+    function detail()
+    {
+        $data['title'] = 'Nama Siswa';
+        $data['pageTitle'] = "Detail Data " . $this->titles;
+        $idKelas = $this->uri->segment(4);
+        $data['data'] = $this->kelas_m->getSiswaKelas($idKelas);
+        $this->template->load('template', $this->vn . '/detail', $data);
+    }
 
     function add()
     {

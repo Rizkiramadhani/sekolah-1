@@ -39,6 +39,7 @@ $no = '1';
 
                                 <td>
                                     <div class="btn-group mb-0">
+                                        <a href="<?= base_url($linkin . '/detail/' . $row->idKelas) ?>" class="btn btn-info btn-sm" data-toggle="tooltip" title="Cek Siswa"><i class="uil uil-clipboard"></i></a>
                                         <a href="<?= base_url($linkin . '/edit/' . $row->idKelas) ?>" class="btn btn-info btn-sm" data-toggle="tooltip" title="Edit"><i class="uil uil-edit"></i></a>
                                         <a href="<?= base_url($linkin . '/delete/' . $row->idKelas) ?>" id="<?= $row->namaKelas ?>" class="delete-data btn btn-info btn-sm" data-toggle="tooltip" title="Hapus"><i class="uil uil-trash-alt"></i></a>
                                     </div>

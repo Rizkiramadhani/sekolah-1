@@ -20,6 +20,19 @@ class kelas_m extends CI_Model
         return $this->db->get($sql)->result();
     }
 
+    function getSiswaKelas($Value)
+    {
+        $idKelas = $this->getIdKelas($Value);
+        $this->db->where('kodeKelas', $idKelas->kodeKelas);
+        return $this->db->get('siswa')->result();
+    }
+
+    function getIdKelas($idKelas)
+    {
+        $this->db->where('idKelas', $idKelas);
+        return $this->db->get('kelas')->row();
+    }
+
     function getDataById($Value)
     {
         $this->db->where($this->pk, $Value);
