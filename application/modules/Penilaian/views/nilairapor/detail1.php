@@ -66,7 +66,7 @@ $kode = $this->uri->segment(4);
                                     <td><input style="width: 40px;" type="text" onkeyup="nilaiuhk('<?= $row->nisn ?>','<?= $kode ?>')" id="nilai1<?= $row->nisn ?>" value="<?= $uhk ?>">
                                     <td><input style="width: 40px;" type="text" onkeyup="nilaiutsk('<?= $row->nisn ?>','<?= $kode ?>')" id="nilai2<?= $row->nisn ?>" id="nilaiuts<?= $row->nisn ?>" value="<?= $utsk ?>">
                                     <td><input style="width: 40px;" type="text" onkeyup="nilaiuask('<?= $row->nisn ?>','<?= $kode ?>')" id="nilai3<?= $row->nisn ?>" id="nilaiuas<?= $row->nisn ?>" value="<?= $uask ?>">
-                                    <td><input style="width: 40px;" type="text" id="rerata<?= $row->nisn ?>" value="<?= $rk ?>" disabled>
+                                    <td><input style="width: 40px;" type="text" id="rerata<?= $row->nisn ?>" value="<?= number_format(floatval($rk), 0, ',', '.')  ?>" disabled>
                                         <!-- <td><input style="width: 40px;" type="text" id="gk<?= $row->nisn ?>" disabled> -->
                                     <td>
                                         <div class="form-row align-items">

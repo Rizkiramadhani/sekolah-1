@@ -313,24 +313,24 @@ class nilairapor extends CI_Controller
         endif;
     }
 
-    // function gradePengetahuan()
-    // {
-    //     $pengetahuan = $_GET['pengetahuan'];
+    function gradePengetahuan()
+    {
+        $pengetahuan = $_GET['pengetahuan'];
 
-    //     if ($pengetahuan >= '85') :
-    //         $grade = 'A';
-    //     elseif ($pengetahuan >= '70') :
-    //         $grade = 'B';
-    //     elseif ($pengetahuan >= '50') :
-    //         $grade = 'C';
-    //     else :
-    //         $grade = 'D';
-    //     endif;
-    //     $data = [
-    //         'grade' => $grade,
-    //     ];
-    //     echo json_encode($data);
-    // }
+        if ($pengetahuan >= '85') :
+            $grade = 'A';
+        elseif ($pengetahuan >= '70') :
+            $grade = 'B';
+        elseif ($pengetahuan >= '50') :
+            $grade = 'C';
+        else :
+            $grade = 'D';
+        endif;
+        $data = [
+            'grade' => $grade,
+        ];
+        echo json_encode($data);
+    }
 
     function nilaiuhk()
     {

@@ -66,11 +66,10 @@ $kode = $this->uri->segment(4);
                                     <td><input style="width: 40px;" type="text" onkeyup="nilaiuh('<?= $row->nisn ?>','<?= $kode ?>')" id="nilai1<?= $row->nisn ?>" value="<?= $uh ?>">
                                     <td><input style="width: 40px;" type="text" onkeyup="nilaiuts('<?= $row->nisn ?>','<?= $kode ?>')" id="nilai2<?= $row->nisn ?>" id="nilaiuts<?= $row->nisn ?>" value="<?= $uts ?>">
                                     <td><input style="width: 40px;" type="text" onkeyup="nilaiuas('<?= $row->nisn ?>','<?= $kode ?>')" id="nilai3<?= $row->nisn ?>" id="nilaiuas<?= $row->nisn ?>" value="<?= $uas ?>">
-                                    <td><input style="width: 40px;" type="text" id="rerata<?= $row->nisn ?>" value="<?= $r ?>" disabled>
+                                    <td><input style="width: 40px;" type="text" id="rerata<?= $row->nisn ?>" value="<?= number_format(floatval($r), 0, ',', '.')  ?>" disabled>
                                         <!-- <td><input style="width: 40px;" type="text" id="gp<?= $row->nisn ?>" disabled> -->
                                     <td>
                                         <div class="form-row align-items">
-
                                             <div class="col-auto">
                                                 <div class="input-group">
                                                     <textarea class="form-control" rows="2" onkeyup="deskripsi('<?= $row->nisn ?>','<?= $kode ?>')" id="deskripsi<?= $row->nisn ?>" PLACEHOLDER="Deskripsi"><?= $dk ?></textarea>
@@ -178,7 +177,7 @@ $kode = $this->uri->segment(4);
         console.log(pengetahuan)
         $.ajax({
 
-            url: '<?= base_url("Penilaian/penilaianuts/gradePengetahuan") ?>',
+            url: '<?= base_url("Penilaian/nilairapor/gradePengetahuan") ?>',
             data: 'pengetahuan=' + pengetahuan,
             success: function(data) {
                 var json = data,
